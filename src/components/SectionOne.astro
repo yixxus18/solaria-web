@@ -2,7 +2,7 @@
 import jerusalem from '../assets/jerusalem.png'
 import jefferson from '../assets/jefferson.png'
 import eliseo from '../assets/eliseo.png'
-import colegios from '../assets/colegios.png'
+import fertiliza from '../assets/fertiliza.png'
 ---
 
 <section id="features">
@@ -17,21 +17,19 @@ import colegios from '../assets/colegios.png'
     <div class="mx-auto max-w-7xl pt-12">
       <h2 class="sr-only">Features.</h2>
       <div class="grid gap-12 grid-cols-1 lg:space-y-0 lg:text-center md:grid-cols-4 sm:text-center sm:items-center">
-        <div class="text-center center">
+        <!-- Asegúrate de que cada div contenedor de imagen tenga 'justify-content: center' -->
+        <div class="text-center center flex justify-center">
           <img src={jerusalem.src} alt="Descripción de la imagen 1" class="rounded-xl w-32 h-32 object-cover">
-      </div>
-      <!-- Espacio para la segunda foto -->
-      <div class="text-center">
+        </div>
+        <div class="text-center flex justify-center">
           <img src={jefferson.src} alt="Descripción de la imagen 2" class="rounded-xl w-32 h-32 object-cover">
-      </div>
-      <!-- Espacio para la tercera foto -->
-      <div class="text-center">
+        </div>
+        <div class="text-center flex justify-center">
           <img src={eliseo.src} alt="Descripción de la imagen 3" class="rounded-xl w-32 h-32 object-cover">
-      </div>
-      <!-- Espacio para la cuarta foto -->
-      <div class="text-center">
-          <img src={colegios.src} alt="Descripción de la imagen 4" class="rounded-xl w-32 h-32 object-cover">
-      </div>
+        </div>
+        <div class="text-center flex justify-center">
+          <img src={fertiliza.src} alt="Descripción de la imagen 4" class="rounded-xl w-32 h-32 object-cover">
+        </div>
       </div>
     </div>
   </div>
