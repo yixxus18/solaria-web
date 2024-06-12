@@ -6,6 +6,7 @@ import linkedin from '../assets/linkedin-logo.svg';
 import facebook from '../assets/facebook-logo.svg';
 import phone from '../assets/phone.svg';
 import envelope from '../assets/envelope.svg';
+const currentYear = new Date().getFullYear(); 
 ---
 <div style={`position: relative; background-image: url(${imagen.src}); background-attachment: fixed; background-size: cover; background-position: center; height: 50vh; margin-left: 0; margin-right: 0;`}>
 
@@ -22,7 +23,8 @@ import envelope from '../assets/envelope.svg';
             <a href="enlace_telefono"><img src={phone.src} alt="Teléfono"></a>
             <a href="enlace_correo"><img src={envelope.src} alt="Correo"></a>
         </div>
-
+        <br>
+        <p style="color: white; text-align: center;">Derechos reservados por Solaria © {currentYear}</p>
     </div>
 
 </div>
