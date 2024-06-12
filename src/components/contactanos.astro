@@ -1,0 +1,54 @@
+---
+import fond from '../assets/fond.jpg'
+import whats from '../assets/whats.svg';
+import linkedin from '../assets/link.svg';
+import face from '../assets/face.svg';
+import Contact from "./Contact.astro";
+---
+<br>
+<br>
+<br>
+<div style={`position: relative; background-image: url(${fond.src});  background-size: cover; background-position: center; height: 100vh; margin-left: 0; margin-right: 0; width:100%; height: fit-content;`}>
+    <br>
+    <br>
+    <br>
+    <p class="text-center text-4xl text-white">Solaria Laguna</p>
+    <br>
+    <p class="text-center text-xl text-white">Ayudando a empresas mexicanas a aprovechar el sol.</p>
+    <br>
+    <br>
+    <div class="flex flex-col lg:flex-row center">
+        
+        <div class="bg-white p-4 md:p-8 lg:p-12 lg:w-2/6" style="border-radius: 10px; margin:15px;">
+            <!-- Contenido de la primera sección -->
+            <p class="text-orange-400 text-3xl text-center">Contáctanos</p>  
+            <br>
+            <div style="display: flex; justify-content: center;">
+                <a href="enlace_linkedin"><img src={face.src} alt="LinkedIn"></a>
+                <a href="enlace_linkedin"><img src={linkedin.src} alt="LinkedIn"></a>
+                <a href="enlace_whatsapp"><img src={whats.src} alt="WhatsApp"></a>
+            </div>
+            <br>
+            <div class="flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e9a60a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z"/></svg>
+                <br>
+                <p class="text-center">contacto@ensoenergia.com</p>
+            </div>
+            <br>
+            <div class="flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e9a60a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <p class="text-center">Calz Moctezuma 312, Francisco Villa, 27050 Torreón, Coah.</p>
+            </div>
+            <br>
+            <p class="text-center">Puedes llenar el formulario y te responderemos en menos de 24 horas con tu cotización.</p>
+            <br>
+            <p class="text-center">También puedes escribirnos directo a <strong>contacto@ensoenergia.com</strong> o por WhatsApp.</p>
+            <br>
+            <p class="text-center">Ofrecemos servicio en toda la República Mexicana.</p>
+        </div>
+        <div class="bg-white p-4 md:p-8 lg:p-12 lg:w-4/6" style="border-radius: 10px; margin:15px;">
+            <Contact />
+        </div>
+    </div>
+    <br>
+</div>
