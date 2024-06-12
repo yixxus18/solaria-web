@@ -4,9 +4,12 @@ import solaria from '../assets/logo.png';
 import pan from '../assets/pan.jpg';
 ---
 <div style={`position: relative; background-image: url(${fond.src}); background-attachment: fixed; background-size: cover; background-position: center; height: 50vh; margin-left: 0; margin-right: 0;`}
+
   class="hidden sm:block">
- 
-  </div>
+
+  <img src={fond.src} loading="lazy" alt="Imagen de fondo" style="display: none;">
+
+</div>
 
   <div style={`position: relative; background-image: url(${pan.src});  background-size: cover; background-position: center; height: 55vh; margin-left: 0; margin-right: 0;`}
   class="lg:hidden">
