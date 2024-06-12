@@ -3,10 +3,22 @@ import fond from '../assets/fd2.jpg';
 import solaria from '../assets/logo.png';
 ---
 <div class="hidden sm:block">
+  <style>
+    @keyframes slideDown {
+      from {
+        transform: translateY(-300%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
   <div style={`position: relative; background-image: url(${fond.src}); background-attachment: fixed; background-size: cover; background-position: center -200px; height: 100vh; margin-left: 0; margin-right: 0;`}>
     <div style="position: relative; display: flex; justify-content: center; align-items: center; height: 100%;">
-      <h2 class=" text-5xl text-center text-white text-white tracking-wider">
-        <img src={solaria.src} alt="">
+      <h2 class="text-5xl text-center text-white tracking-wider">
+        <img src={solaria.src} alt="" style="animation: slideDown 1s ease-out forwards;">
       </h2>
       <div style="position: absolute; bottom: 0; width: 100%; display: flex; justify-content: center;">
         <a href="#section-three">
@@ -14,7 +26,6 @@ import solaria from '../assets/logo.png';
             <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
           </svg>
         </a>
-      </div>
       </div>
     </div>
   </div>
