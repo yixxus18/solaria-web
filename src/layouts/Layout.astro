@@ -1,0 +1,85 @@
+---
+
+
+
+import Footer from "@components/footer.astro";
+
+import Navbar from "@components/navbar/navbar.astro";
+
+import "@fontsource-variable/inter/index.css";
+
+
+export interface Props {
+
+  title: string;
+
+}
+
+
+
+
+
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+
+
+
+
+const { title } = Astro.props;
+
+
+
+const makeTitle = title
+
+  ? title 
+
+  : "Telco Networks";
+
+---
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width" />
+    
+    <meta name="google-site-verification" content="yIXhbzGQtq-QOlhNOLg8GuD4SxxqMAUmdKFwMwzvKoA" />
+
+    <meta name="description" content="Telco Networks especialistas en diseño y gestion
+    telecomunicaciones, cableado estructurado, sistemas de seguridad y calidad de la energía." />
+
+    <meta name="keywords" content="Telco Networks , Telco , Networks ,telecomunicaciones, cableado estructurado, sistemas de seguridad, telefonía digital, equipo activo, calidad de la energía, sistemas de detección, supresión de incendios, instalación de cableado estructurado, seguridad en telecomunicaciones">
+
+    <meta name="author" content="Telco Networks" />
+
+    <meta name="robots" content="index, follow" />
+
+    <meta name="googlebot" content="index, follow" />
+
+    <meta name="bingbot" content="index, follow" />
+
+    <meta name="title" content="Telco Networks" />
+
+    <meta property="og:title" content="Telco Networks" />
+
+    <meta property="og:type" content="website" />
+
+    <title>Telco Networks. Torreón , Coahuila.</title>
+  </head>
+
+ 
+
+  <body>
+
+
+    <slot />
+
+  </body>
+
+</html>

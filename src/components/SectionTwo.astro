@@ -1,0 +1,44 @@
+---
+import imagen from '../assets/paneles.jpg';
+---
+<section>
+  <div
+    class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-24 scroll-mt-12"
+  >
+    <h1 class="text-center text-orange text-5xl text-orange-400 tracking-wider">Ventajas de la Energía Solar</h1>
+    <br>  
+    <p class="text-center text-xl">Estas son algunas de las ventajas de cambiarse a la energía solar.</p>
+    <br>
+    <div class="flex flex-wrap">
+      <!-- Secciones -->
+  <div class="w-full md:w-1/2 p-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:grid-cols-1">
+      <!-- Sección 1 -->
+      <div class="bg-white rounded p-4 mb-4">
+        <h2 class="text-xl mb-2 text-orange-400">Reducción de gastos de luz</h2>
+        <p>Muchos usuarios ven en esta energía sostenible, una manera de reducir sustancialmente su factura de la luz.</p>
+      </div>
+      <!-- Sección 2 -->
+      <div class="bg-white rounded p-4 mb-4">
+        <h2 class="text-orange-400 mb-2 text-xl">Seguridad</h2>
+        <p>Proporciona una mayor seguridad en la red ante el riesgo de sobrecargas o incendios en centros de transformación.</p>
+      </div>
+      <!-- Sección 3 -->
+      <div class="bg-white rounded p-4 mb-4">
+        <h2 class="font-bold mb-2 text-orange-400">Mantenimiento Sencillo</h2>
+        <p>Las instalaciones solares no requieren un gran mantenimiento y los costos en mantenimiento son mínimos.</p>
+      </div>
+      <!-- Sección 4 -->
+      <div class="bg-white rounded p-4 mb-4">
+        <h2 class="text-xl mb-2 text-orange-400">Energía ecológica</h2>
+        <p>La producción de energía eléctrica no es contaminante ni provoca gases de efecto invernadero.</p>
+      </div>
+    </div>
+  </div>
+      <!-- Imagen -->
+      <div class="w-full md:w-1/2 p-4 order-first sm:order-last ">
+        <img src={imagen.src} alt="Imagen" class="rounded shadow-lg">
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+---
+import imagen from '../assets/footer.jpg';
+import solaria from '../assets/logohome.png';
+import whats from '../assets/whatsapp-logo.svg';
+import linkedin from '../assets/linkedin-logo.svg';
+import facebook from '../assets/facebook-logo.svg';
+import phone from '../assets/phone.svg';
+import envelope from '../assets/envelope.svg';
+---
+<div style={`position: relative; background-image: url(${imagen.src}); background-attachment: fixed; background-size: cover; background-position: center; height: 50vh; margin-left: 0; margin-right: 0;`}>
+
+    <div style="background-color: rgba(77, 134, 226, 0.3); position: absolute; top: 0; bottom: 0; left: 0; right: 0;"></div>
+
+    <div style="position: relative; display: flex; justify-content: center; align-items: center; height: 100%; flex-direction: column;">
+
+        <img src={solaria.src} alt="">
+        <br>
+        <div style="display: flex; justify-content: center;">
+            <a href="enlace_facebook"><img src={facebook.src} alt="Facebook"></a>
+            <a href="enlace_linkedin"><img src={linkedin.src} alt="LinkedIn"></a>
+            <a href="enlace_whatsapp"><img src={whats.src} alt="WhatsApp"></a>
+            <a href="enlace_telefono"><img src={phone.src} alt="Teléfono"></a>
+            <a href="enlace_correo"><img src={envelope.src} alt="Correo"></a>
+        </div>
+
+    </div>
+
+</div>
