@@ -16,8 +16,19 @@ export interface Props {
 }
 
 
+import fond from "assets/sun-half.png";  
+import faviconSvgSrc from 'assets/icono.svg';
 
 
+import { getImage } from "astro:assets";
+
+const appleTouchIcon = await getImage({
+  src: fond,
+  width: 180,
+  height: 180,
+  format: 'png'
+})
+const faviconSvg = await getImage({ src: faviconSvgSrc, format: 'svg' })
 
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
@@ -48,14 +59,14 @@ const makeTitle = title
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width" />
-    
-    <meta name="google-site-verification" content="yIXhbzGQtq-QOlhNOLg8GuD4SxxqMAUmdKFwMwzvKoA" />
+    <link rel="icon" href={appleTouchIcon.src} type="image/png" />
+    <link rel="apple-touch-icon" href={appleTouchIcon.src} />
 
     <meta name="description" content="Solaria Laguna" />
 
-    <meta name="keywords" content="Telco Networks , Telco , Networks ,telecomunicaciones, cableado estructurado, sistemas de seguridad, telefonía digital, equipo activo, calidad de la energía, sistemas de detección, supresión de incendios, instalación de cableado estructurado, seguridad en telecomunicaciones">
+    <meta name="keywords" content="paneles solares, energía solar, sistema fotovoltaico, energía renovable, instalación de paneles solares, beneficios de la energía solar, sostenibilidad, eficiencia energética, inversión en paneles solares, tecnología solar, impacto ambiental positivo">
 
-    <meta name="author" content="Telco Networks" />
+    <meta name="author" content="Solaria Laguna" />
 
     <meta name="robots" content="index, follow" />
 
@@ -66,6 +77,10 @@ const makeTitle = title
     <meta name="title" content="Solaria Laguna" />
 
     <meta property="og:title" content="Solaria Laguna" />
+
+    <meta property="og:image" content={fond.src} />
+
+    <meta property="og:url" content={canonicalURL} />
 
     <meta property="og:type" content="website" />
 
