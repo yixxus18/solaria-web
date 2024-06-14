@@ -15,14 +15,50 @@
     <div class="mt-12 lg:mt-0">
         <ul class="flex flex-col items-start gap-x-12 justify-center divide-y sm:divide-y-0 sm:flex-row lg:grid lg:grid-cols-2">
             <li class="text-center w-full px-8 py-8 sm:w-auto lg:py-6">
-                <h4 class="text-7xl text-black font-semibold">60</h4>
+                <h4 class="text-7xl text-black font-semibold counter" data-count="60">0</h4>
                 <p class="mt-3 font-medium">Hasta 60 meses para pagar</p>
             </li>
             <li class="text-center w-full px-8 py-8 sm:w-auto lg:py-6">
-                <h4 class="text-7xl text-black font-semibold">95%</h4>
-                <p class="mt-3 font-medium">Ahorro en tu recibo</p>
+                <h4 class="text-7xl text-black font-semibold counter" data-count="95%">0%</h4>
+   
+                <p class="mt-3 font-medium">De ahorro en tu recibo</p>
             </li>
         </ul>
     </div>
 </div>
 </section>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+// Utiliza IntersectionObserver para detectar cuando el componente es visible en la pantalla
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            $('.counter').each(function() {
+                var $this = $(this),
+                    countTo = $this.attr('data-count');
+
+                $({ countNum: $this.text()}).animate({
+                    countNum: parseFloat(countTo)
+                }, {
+                    duration: 2200,
+                    easing: 'linear',
+                    step: function() {
+                        if (countTo.includes('%')) {
+                            $this.text(Math.floor(this.countNum) + '%');
+                        } else {
+                            $this.text(Math.floor(this.countNum));
+                        }
+                    },
+                    complete: function() {
+                        $this.text(this.countNum + (countTo.includes('%') ? '%' : ''));
+                    }
+                });
+            });
+            observer.unobserve(entry.target);
+        }
+    });
+});
+
+// Observa el componente para iniciar la animación cuando sea visible
+observer.observe(document.querySelector('.counter'));
+</script>

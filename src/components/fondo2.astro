@@ -4,14 +4,30 @@ import solaria from '../assets/logo.png';
 import pan from '../assets/pan.jpg';
 ---
 <div style={`position: relative; background-image: url(${fond.src}); background-attachment: fixed; background-size: cover; background-position: center; height: 50vh; margin-left: 0; margin-right: 0;`}
-
-  class="hidden sm:block">
-
-  <img src={fond.src} loading="lazy" alt="Imagen de fondo" style="display: none;">
+  class="desktop">
 
 </div>
 
-  <div style={`position: relative; background-image: url(${pan.src});  background-size: cover; background-position: center; height: 55vh; margin-left: 0; margin-right: 0;`}
-  class="lg:hidden">
+<div style={`position: relative; background-image: url(${pan.src});  background-size: cover; background-position: center; height: 55vh; margin-left: 0; margin-right: 0;`}
+  class="mobile">
     <!-- Contenido del elemento -->
-  </div>
+</div>
+
+<style>
+  @media (max-width: 600px) {
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: block;
+    }
+  }
+  @media (min-width: 601px) {
+    .desktop {
+      display: block;
+    }
+    .mobile {
+      display: none;
+    }
+  }
+</style>
