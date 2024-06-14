@@ -1,5 +1,5 @@
 ---
-import fond from '../assets/fd2.jpg';
+import fond from '../assets/atardecer.jpg';
 import solaria from '../assets/logo.png';
 ---
 <div class="hidden sm:block">
@@ -19,7 +19,7 @@ import solaria from '../assets/logo.png';
     }
   </style>
   <h1 class="hidden">Solaria</h1>
-  <div style={`position: relative; background-image: url(${fond.src}); background-attachment: fixed; background-size: cover; background-position: center -200px; height: 100vh; margin-left: 0; margin-right: 0;`}>
+  <div style={`position: relative; background-image: url(${fond.src}); background-attachment: fixed; background-size: cover; background-repeat: no-repeat; background-position: center center; height: 100vh; margin-left: 0; margin-right: 0;`}>
     <div style="position: relative; display: flex; justify-content: center; align-items: center; height: 100%;">
       <h2 class="text-5xl text-center text-white tracking-wider">
         <img src={solaria.src} alt="Solaria Logo" style="animation: slideDown 3s ease-out forwards;">
@@ -33,4 +33,3 @@ import solaria from '../assets/logo.png';
       </div>
     </div>
   </div>
-</div>
