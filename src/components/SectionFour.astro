@@ -23,46 +23,67 @@ import tool from "../assets/screwdriver.svg";
     height: "fit-content",
   }}>
   <br />
-
+  <br />
   <p class="text-center text-4xl text-[#e0971a]">¿QUÉ HACEMOS?</p>
+  <br />
   <br />
   <p class="text-white text-center text-5xl tracking-wider">
     Productos y Servicios
   </p>
   <br /><br />
   <p class="text-white text-center text-lg line-clamp-3 sm:text-lg">
-    En nuestra oferta encontrarás una variedad de productos y servicios diseñados para ayudar
-a clientes de todo tipo a optimizar su consumo eléctrico en México.
+    En nuestra oferta encontrarás una variedad de productos y servicios
+    diseñados para ayudar a clientes de todo tipo a optimizar su consumo
+    eléctrico en México.
   </p>
   <br />
-  <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6">
+  <br />
+  <br />
+  <div
+    class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6 items-center">
     <!-- Inicio del primer elemento -->
     <div class="flex flex-col items-center">
       <img src={solarpanel.src} alt="" />
       <p class="text-center mt-4 text-white text-2xl">Paneles solares</p>
     </div>
-  
+
     <div class="flex flex-col items-center text-white">
       <img src={tool.src} alt="" />
       <p class="text-center mt-2 text-2xl">Instalacion y mantenimiento</p>
     </div>
-  
+
     <div class="flex flex-col items-center text-white">
       <img src={calculadora.src} alt="" />
       <p class="text-center mt-2 text-2xl">Monitoreo de consumo</p>
     </div>
-  
-    <!-- Segunda fila, elementos centrados en una sola columna y centrados horizontalmente -->
-    <div class="flex flex-col items-center text-white col-start-2 lg:col-span-1">
+  </div>
+  <br />
+  <br />
+  <div
+    class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-5 gap-4 items-center">
+    <!-- Elemento existente -->
+    <div class="flex flex-col items-center text-white">
+      <!-- Nuevo elemento -->
+    </div>
+    <div class="flex flex-col items-center text-white">
       <img src={chat.src} alt="" />
       <p class="text-center mt-2 text-2xl">Asesoría y consultoría</p>
     </div>
-  
-    <div class="flex flex-col items-center text-white col-start-2 lg:col-span-1">
+    <div class="flex flex-col items-center text-white">
+      <!-- Nuevo elemento -->
+    </div>
+    <!-- Elemento existente -->
+    <div class="flex flex-col items-center text-white">
       <img src={money.src} alt="" />
       <p class="text-center mt-2 text-2xl">Venta de equipo</p>
     </div>
+
+    <!-- Elementos adicionales vacíos -->
+    <div class="flex flex-col items-center text-white">
+      <!-- Nuevo elemento -->
+    </div>
   </div>
+  <br />
   <br />
   <br />
 </div>
