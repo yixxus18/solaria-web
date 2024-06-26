@@ -5,6 +5,6 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://telco-networks.mx",
+  site: "https://www.solaria.com.mx",
   integrations: [tailwind(),sitemap()],
 });
